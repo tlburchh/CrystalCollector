@@ -1,0 +1,9 @@
+.row{
+    border:black
+    solid
+    2px;
+}
+.title{
+    text-align: center;
+    font-size: 30px;
+}
