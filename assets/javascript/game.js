@@ -18,31 +18,31 @@ $(document).ready(function() {
     var lab = $("#lab");
     var mal = $("#mal");
     var opal = $("#opal");
+    
 
     for (var i = 0; i < 4; i++){
-        $("#chrys") = Math.floor(Math.random() *11) +5;
+        chrys = Math.floor(Math.random() *11) +5;
     }
     for (var j = 0; j < 4; j++){
-        $("#lab") = Math.floor(Math.random() *11) +5;
+        lab = Math.floor(Math.random() *11) +5;
     }
     for (var k = 0; k < 4; k++){
-        $("#mal") = Math.floor(Math.random() *11) +5;
+        mal = Math.floor(Math.random() *11) +5;
     }
     for (var m = 0; m < 4; m++){
-        $("#opal") = Math.floor(Math.random() *11) +5;
+        opal = Math.floor(Math.random() *11) +5;
     }
-    imageCrystal.attr("#chrys", numberOptions[i]);
-    imageCrystal.attr("#lab", numberOptions[j]);
+    chrys.attr("#chrys").val([i]);
+    console.log(chrys);
+    lab.attr("#lab").val([j]);
 
-    imageCrystal.attr("#mal", numberOptions[k]);
+    mal.attr("#mal").val([k]);
 
-    imageCrystal.attr("#opal", numberOptions[m]);
+    opal.attr("#opal").val([m]);
 
-
+});
     // make images buttons and connect to previous
-    crystalNumbers = crystalCount[i,j,k,m]
-    console.log(crystalNumbers);
+    // crystalNumbers = crystalCount[i,j,k,m]
+    // console.log(crystalNumbers);
     // have clicks adjust score
-
-})
-})
+});
