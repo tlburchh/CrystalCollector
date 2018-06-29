@@ -1,51 +1,111 @@
-var targetNumber
-var score = 0
-var winCount = 0
-var lossCount = 0
-var crystalCount = 0
-var crystal = $(".crystal")
-// make target number range between 40 and 60
-targetNumber = Math.floor(Math.random() *21) +40;
-// create random numbers for crystals rangine between 5 and 15
-$(".randomnumber").text(targetNumber);
-console.log(targetNumber);
-// create connection between numbers, crystal count and crystal ID
-$(document).ready(function() {
+$(document).ready(function(){
 
-    // $(function () {
-    //     $(".crystal").on('click', function() {
-    //         this.crystal = (Math.random() *11) +5;
-    //     });
+  var stopGame = false;
+  var score = 0;
+  var goalScore = [];
+  var winCount = 0;
+  var lossCount = 0;  
+    //generates random number between 40 and 40
+  goalScore = Math.floor(Math.random() * 21) +40;
+    console.log(goalScore);
+     //designates each crystal as an object
+    var crystalSelect = {
+        crystalType: {
+
+            firstCrystal: $('#chrys'),
+            secondCrystal: $('#lab'),
+            thirdCrystal: $('#mal'),
+            forthCrystal: $('#opal')}
+            
+        }
 
 
-    $("#crystal-chrys").on("click", function(){
-    var chrys = Math.floor(Math.random() *11) +5;
-    $("#score").append("<p>" + "Total Score:" + chrys + "</p>");
-    });
-    $("#crystal-lab").on("click", function(){
-    var lab = Math.floor(Math.random() *11) +5;
-    $("#score").append("<p>" + "Total Score:" + lab + "</p>");
-    });
-    $("#crystal-mal").on("click", function(){
-    var mal = Math.floor(Math.random() *11) +5;
-    $("#score").append("<p>" + "Total Score:" + mal + "</p>");
-    });
-    $("#crystal-opal").on("click", function(){
-    var opal = Math.floor(Math.random() *11) +5;
-    $("#score").append("<p>" + "Total Score:" + opal + "</p>");
-    });
 
-    // countCrystal = function() {
-    //   var crystalCount = [chrys + lab + mal + opal];
+            function randNum() {
+                crystalType = Math.floor(Math.random() * 11) +5;
+                // $('crystal').append(crystalType);
+                console.log(crystalType);
+            }
+            randNum();
 
+                $('#crystal').on('click', function(){
+                $('#crystal').append(crystalType);
+                console.log(crystalType);
+                });
+         /************
+          * creates random number at every click
+          */
+        // $('#chrys').on('click', function(){
+        //     var random = Math.floor(Math.random() * 11) +5;
+        //     $('#chrys').append(random);
+        //     console.log(random);
+        // })
+
+    //generates random number
+    //     function randNum(){
+    //     var random = Math.floor(Math.random() * 11) +5;
+    //     // $('.crystal').push(random);
+    //     console.log(random);
     // };
-    // countCrystal();
+    // crystalType= randNum();
 
-    //  $("#score").append("<p>" + "Total Score:" + chrys + "</p>");
+    // $('.crystal').on('click', function(){
+    //     crystalType.append("#score")
+    // })
+});
+
+
+
+
+// var targetNumber
+// var score = 0
+// var winCount = 0
+// var lossCount = 0
+// var crystalCount = 0
+// var crystal = $(".crystal")
+// // make target number range between 40 and 60
+// targetNumber = Math.floor(Math.random() *21) +40;
+// // create random numbers for crystals rangine between 5 and 15
+// $(".randomnumber").text(targetNumber);
+// console.log(targetNumber);
+// // create connection between numbers, crystal count and crystal ID
+// $(document).ready(function() {
+
+//     // $(function () {
+//     //     $(".crystal").on('click', function() {
+//     //         this.crystal = (Math.random() *11) +5;
+//     //     });
+
+
+//     $("#crystal-chrys").on("click", function(){
+//     var chrys = Math.floor(Math.random() *11) +5;
+//     $("#score").append("<p>" + "Total Score: 
+// " + chrys + "</p>");
+//     });
+//     $("#crystal-lab").on("click", function(){
+//     var lab = Math.floor(Math.random() *11) +5;
+//     $("#score").append("<p>" + "Total Score:" + lab + "</p>");
+//     });
+//     $("#crystal-mal").on("click", function(){
+//     var mal = Math.floor(Math.random() *11) +5;
+//     $("#score").append("<p>" + "Total Score:" + mal + "</p>");
+//     });
+//     $("#crystal-opal").on("click", function(){
+//     var opal = Math.floor(Math.random() *11) +5;
+//     $("#score").append("<p>" + "Total Score:" + opal + "</p>");
+//     });
+
+//     // countCrystal = function() {
+//     //   var crystalCount = [chrys + lab + mal + opal];
+
+//     // };
+//     // countCrystal();
+
+//     //  $("#score").append("<p>" + "Total Score:" + chrys + "</p>");
        
 
 
-});
+// });
 
 
 
