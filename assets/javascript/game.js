@@ -21,17 +21,38 @@ $(document).ready(function(){
 
 
 
-            function randNum() {
-                crystalType = Math.floor(Math.random() * 11) +5;
-                // $('crystal').append(crystalType);
-                console.log(crystalType);
-            }
-            randNum();
+        /******************************************************* */
+        var randNum = Math.floor(Math.random() * 11) +5;
 
-                $('#crystal').on('click', function(){
-                $('#crystal').append(crystalType);
-                console.log(crystalType);
-                });
+        var score = function crystalClick() {
+        $('.crystal').click(function() {
+            ('#score').html(randNum);
+            return crystalSelect;
+        });}
+        // crystalClick()
+        /******************************************************** */
+
+
+        if ( score < goalScore){
+            stopGame = false;
+        } else if (score === goalScore) {
+            stopGame = true;
+            winCount++;
+            alert('You Win!!')
+        } else (score > goalScore); {
+            stopGame = true;
+            lossCount++;
+            alert('Try Again');
+        }
+        /**************
+         * Data reset
+         */
+        if (stopGame = true) {
+            goalScore = Math.floor(Math.random() * 21) +40;
+            console.log(goalScore);
+            score = 0;
+        } else{}
+
          /************
           * creates random number at every click
           */
