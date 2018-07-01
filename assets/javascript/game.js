@@ -8,27 +8,50 @@ $(document).ready(function(){
     //generates random number between 40 and 40
   goalScore = Math.floor(Math.random() * 21) +40;
     console.log(goalScore);
+    $('.randomnumber').text(goalScore);
      //designates each crystal as an object
-    var crystalSelect = {
-        crystalType: {
+    // var crystalSelect = {
+    //     crystalType: {
 
-            firstCrystal: $('#chrys'),
-            secondCrystal: $('#lab'),
-            thirdCrystal: $('#mal'),
-            forthCrystal: $('#opal')}
+    //         firstCrystal: $('#chrys'),
+    //         secondCrystal: $('#lab'),
+    //         thirdCrystal: $('#mal'),
+    //         forthCrystal: $('#opal')}
             
-        }
+    //     }
 
 
 
         /******************************************************* */
         var randNum = Math.floor(Math.random() * 11) +5;
 
-        var score = function crystalClick() {
-        $('.crystal').click(function() {
-            ('#score').html(randNum);
-            return crystalSelect;
-        });}
+        var crystalChrys = randNum;
+        var crystalLab = randNum;
+        var crystalMal = randNum;
+        var crystalOpal = randNum;
+
+        $('#chrys').on('click', function() {
+            score = score + (crystalChrys);
+            $('#score').text(score);
+        });
+        $('#lab').on('click', function() {
+            score = score + (crystalLab);
+            $('#score').text(score);
+        });
+        $('#mal').on('click', function() {
+            score = score + (crystalMal);
+            $('#score').text(score);
+        });
+        $('#opal').on('click', function() {
+            score = score + (crystalOpal);
+            $('#score').text(score);
+        });
+
+        // var score = function crystalClick() {
+        // $('.crystal').click(function() {
+        //     ('#score').html(randNum);
+        //     return crystalSelect;
+        // });}
         // crystalClick()
         /******************************************************** */
 
