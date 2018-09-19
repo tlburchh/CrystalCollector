@@ -11,3 +11,6 @@ You win the game by matching your total score to the random number. You lose the
 The value of each crystal is hidden from you until you click on it.
 
 Each time that the game starts the value of the crystals will change.
+
+
+Demo:  https://tlburchh.github.io/CrystalCollector/
